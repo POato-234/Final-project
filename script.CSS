@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar{
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar ul li{
+    display: inline;
+}
+.navbar ul li a{
+    color: #007bff;
+    font-weight: bold;
+}
+.navbar ul li a:hover{
+    color: #0056b3;
+}
