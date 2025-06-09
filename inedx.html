@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        .mew-div-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
         .new-div-container h1{
             margin-top: 8%;
             font-size: 4.8rem;
@@ -17,15 +21,16 @@
             margin-right: 45%;
         }
         .img-1 {
-            margin-left: 50%;
-            margin-top: -20%;
+            margin-left: 58%;
+            margin-top: -18%;
+
         }
         .new-div-container p{
             font-size: 1.5rem;
             font-family: 'League Spartan', sans-serif;
             margin-left: 5%;
             margin-right: 50%;
-            margin-top: -7%;
+            margin-top: -5%;
             color: gray;
         }
         .div-container h1{
@@ -33,6 +38,49 @@
             margin-top: 13%;
             font-family: 'League Spartan', sans-serif;
             font-size: 3rem;
+        }
+        .img-center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+        }
+        .div-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20%;
+            margin-top: 5%;
+            margin-left: 15%;
+            margin-right: 5%;
+        }
+        .div-grid-2{
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            gap: 15%;
+            margin-top: 5%;
+            margin-left: 13%;
+            margin-right: 5%;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.2rem
+        }
+        .newest-container {
+            margin-top: 15%;
+        }
+        .div-3-container {
+            text-align: center;
+            background-color: #EEEEEE;
+            height: 70vh;
+        }
+        .div-3-container p{
+            font-size: 1.5rem;
+            margin-right: 20%;
+            margin-left: 20%;
+            
+        }
+        footer {
+            background-color: #353030;
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -50,13 +98,42 @@
         </nav>
     </header>
     <div class="new-div-container">
-        <h1>Manage your construction sites with ease</h1>
-        <img class="img-1" src="img/measurement-tools-mac-en.png" width="700" height="400" alt="Construction Image with a phone tablet and laptop displaying a construction plan">
+        <h1>Manage your construction sites with us</h1>
+        <img class="img-1" src="img/measurement-tools-mac-en.png" width="600" height="400" alt="Construction Image with a phone tablet and laptop displaying a construction plan">
         <p>Keep track of tasks and inspections. Share info with your team and stay connected on-site.</p>
     </div>
-    <div class="div-container">
-        <h1>Internship/Programs</h1>
+    <section class="div-container">
+        <h1>INTERNSHIP/PROGRAMS</h1>
     </div>
+    <div class="newest-container">
+    <div class="div-grid-container">
+        <img clas src="img/Your paragraph text.png" alt="3 circiular images, 1 of them has a person the second has biuldings and the third one has a hammer">
+        <img src="img/Your paragraph text (3).png" alt="">
+        <img src="img/Your paragraph text (4).png" alt="">
+    </div>
+    <div class="div-grid-2">
+        <p>Learn essential soft skills, safety protocols, and industry knowledge to prepare for your career in construction. Our programs support your growth every step of the way. </p>
+        <p>Get matched with top construction firms for real-world experience. We partner with companies across the industry to provide meaningful, on-site learning opportunities. </p>
+        <p>Work with professional tools and materials under expert supervision. Gain the practical skills you need to succeed on the job site from day one.</p>
+    </div>
+</section>
+<br>
+<div class="div-3-container">
+    <img src="img/Screenshot_2025-05-28_150108-removebg-preview (1).png" alt="a logo of a construction company" class="img-center" width="300" height="200">
+    <br>
+    <p>Maple Leaf Construction is a successful heavy civil construction company that offers a wide variety of services from small repair and maintenance jobs to large commercial jobs. These services include commercial development, concrete and asphalt paving, site services, residential developments, street reconstruction, highway rehabilitation as well as repairs and maintenance.
+        We work throughout Manitoba, Saskatchewan and North Western Ontario with mobile plants and crews. We are based out of Winnipeg, Manitoba,
+</p>
+</div>
+<br>
+<footer>
+    <a href="">FILLER</a>
+    <a href="">FILLER</a>
+    <a href="">FILLER</a>
+    <a href="">FILLER</a>
+    <a href="">FILLER</a>
+</footer>
+    
     
 
 </body>
