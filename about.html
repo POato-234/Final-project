@@ -6,6 +6,10 @@
     <title>ABOUT US page</title>
     <link rel="stylesheet" href="css/STYLE.CSS">
     <style>
+        body{
+            height: 100%;
+        }
+
         .first-paragraph-container p{
             margin-left: 5%;
             margin-top: 5%;
@@ -19,10 +23,28 @@
             font-family: 'League Spartan', sans-serif;
             font-weight: 750;
         }
-        .first-paragraph-container img{
+        video{
+            border-radius: 10px 10px 10px 10px;
+            justify-self: center;
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        .last-div-hopfully{
             display: flex;
+            width: 10*0%;
+            max-width: 100%; 
+            height: 550px; 
+            overflow: hidden; 
+            position: relative;
+        }
+        .last-div-hopfully video{
+            object-fit: cover; 
             align-items: center;
-            width: 100%;
+            justify-content: center;
+            align-self: center;
+
         }
     </style>
 </head>
@@ -43,8 +65,17 @@
         <h1>ABOUT US</h1>
         <p>Maple Leaf Construction is an industry leader in the construction field.We utilize advanced technology and state of the art equipment to help ensure the products and services we deliver are done quickly and of the highest quality.
         </p>
-        <br>
-        <img class="img-center" src="img/65-Ave-construction-photo.jpg" alt="a picture of a construction site with workers and and cranss">
     </div>
+    <br>
+    <div>
+    <div class="last-div-hopfully">
+        <video src="img/42926-434300944.mp4" autoplay muted loop playsinline>        
+            <p>Whether it be grade controlled electronics for asphalt pavers and concrete finishers or GPS controlled excavation and base equipment, Maple Leaf Construction’s team will deliver a finished product with a high degree of accuracy in the shortest time possible.
+            Maple Leaf Construction is a leader in environmental recycling. We utilize concrete recycling and have developed an expertise in the use of recycled subbase, base and asphalt products.
+        </p>
+    </div>
+    <footer>
+
+    </footer>
 </body>
 </html>
