@@ -40,7 +40,8 @@ nav ul li a:hover{
     top: 0;
     right: 0;
     left: 0;
-    transition: box-shadow .15s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+    transition: box-shadow 0.3s ease;
     background: #fff;
     /* animation: slide-in-down .42s cubic-bezier(.165,.84,.44,1); */
 }
