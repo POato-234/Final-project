@@ -9,127 +9,173 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        body { /* Base body styles */
+            height: 100%; /* Full height of screen */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
         }
-        .mew-div-container{
-            display: flex;
-            flex-wrap: wrap;
+        .new-div-container { /* Container for hero text and image */
+            display: -webkit-flex; /* Adds flex for Safari */
+            display: flex; /* Uses flexbox */
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
         }
-        .new-div-container h1{
-            margin-top: 8%;
-            font-size: 4.8rem;
-            font-family: 'League Spartan', sans-serif;
-            margin-left: 5%;
-            margin-right: 45%;
+        .new-div-container h1 { /* Main heading inside hero section */
+            margin-top: 8%; /* Pushes heading down */
+            font-size: 4.8rem; /* Large font size */
+            font-family: 'League Spartan', sans-serif; /* Sets font */
+            margin-left: 5%; /* Pushes heading to the right */
+            margin-right: 45%; /* Leaves space for the image */
         }
-        .img-1 {
-            margin-left: 58%;
-            margin-top: -18%;
-
+        .img-1 { /* Hero image next to heading */
+            margin-left: 58%; /* Pushes image to the right */
+            margin-top: -18%; /* Pulls image upward */
         }
-        .new-div-container p{
-            font-size: 1.5rem;
-            font-family: 'League Spartan', sans-serif;
-            margin-left: 5%;
-            margin-right: 50%;
-            margin-top: -5%;
-            color: gray;
+        .new-div-container p { /* Hero paragraph below heading */
+            font-size: 1.5rem; /* Medium font size */
+            font-family: 'League Spartan', sans-serif; /* Sets font */
+            margin-left: 5%; /* Pushes text to the right */
+            margin-right: 50%; /* Prevents overflow near image */
+            margin-top: -5%; /* Pulls text up */
+            color: gray; /* Light gray text */
         }
-        .div-container h1{
-            text-align: center;
-            margin-top: 13%;
-            font-family: 'League Spartan', sans-serif;
-            font-size: 3rem;
+        .div-container h1 { /* Title for the internships section */
+            text-align: center; /* Centers text */
+            margin-top: 13%; /* Adds space above */
+            font-family: 'League Spartan', sans-serif; /* Font */
+            font-size: 3rem; /* Big title */
         }
-        .img-center{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10%;
+        .img-center { /* Centers a logo image */
+            display: block; /* Allows margin auto to work */
+            margin-left: auto; /* Centers horizontally */
+            margin-right: auto; /* Centers horizontally */
+            margin-top: 10%; /* Adds space above image */
         }
-        .div-grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20%;
-            margin-top: 5%;
-            margin-left: 15%;
-            margin-right: 5%;
+        .div-grid-container { /* Grid for internship images */
+            display: grid; /* Uses CSS grid layout */
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 20%; /* Big space between columns */
+            margin-top: 5%; /* Space above */
+            margin-left: 15%; /* Pushes grid right */
+            margin-right: 5%; /* Limits width */
         }
-        .div-grid-2{
-            display: grid;
-            grid-template-columns: repeat(3, 2fr);
-            gap: 15%;
-            margin-top: 5%;
-            margin-left: 13%;
-            margin-right: 5%;
-            font-family: 'League Spartan', sans-serif;
-            font-size: 1.2rem
+        .div-grid-2 { /* Grid for text below internship images */
+            display: grid; /* CSS grid layout */
+            grid-template-columns: repeat(3, 2fr); /* 3 columns, flexible */
+            gap: 15%; /* Space between */
+            margin-top: 5%; /* Top margin */
+            margin-left: 13%; /* Left margin */
+            margin-right: 5%; /* Right margin */
+            font-family: 'League Spartan', sans-serif; /* Font */
+            font-size: 1.2rem; /* Font size */
         }
-        .newest-container {
-            margin-top: 15%;
+        .newest-container { /* Wrapper around grid section */
+            margin-top: 15%; /* Pushes section down */
         }
-        .div-3-container {
-            text-align: center;
-            background-color: #EEEEEE;
-            height: 70%;
+        .div-3-container { /* Company description section */
+            text-align: center; /* Centers text */
+            background-color: #EEEEEE; /* Light gray background */
+            height: 70%; /* Sets container height */
         }
-        .div-3-container p{
-            font-size: 1.5rem;
-            margin-right: 20%;
-            margin-left: 20%;
-            margin-bottom: 5%;
-            
+        .div-3-container p { /* Text inside description */
+            font-size: 1.5rem; /* Medium font */
+            margin-right: 20%; /* Space on right */
+            margin-left: 20%; /* Space on left */
+            margin-bottom: 5%; /* Space below */
         }
-        .footer-container {
-            background-color: #353030;
-            display: flex;
-            flex-direction: column;
-            height: 40%;
-            line-height: 2.5rem;
+        .footer-container { /* Footer layout */
+            display: -webkit-flex; /* Safari */
+            display: flex; /* Flex layout */
+            flex-wrap: wrap; /* Wrap items on small screens */
+            background-color: #353030; /* Dark gray */
+            padding: 5%; /* Padding around content */
+            justify-content: center; /* Center content horizontally */
+            gap: 50px; /* Space between columns */
+            height: 50%; /* Footer height */
         }
-        .footer-container a {
-            text-decoration: none;
-            color: white;
-            font-family: 'League Spartan', sans-serif;
-            margin-left: 5%;
-            margin-top: 2%;
+        .footer-container a { /* Footer links */
+            color: white; /* White text */
+            text-decoration: none; /* Removes underline */
+            font-family: 'League Spartan', sans-serif; /* Font */
         }
-        a{
-            text-decoration: none;
-            color: white;
-            font-family: 'League Spartan', sans-serif;
+        .footer-icon { /* Footer social media icons */
+            width: 40px; /* Icon width */
+            height: 40px; /* Icon height */
+            transition: -webkit-transform 0.3s ease; /* Smooth scaling */
+            transition: transform 0.3s ease;
         }
+        .footer-icon:hover { /* Icon on hover */
+            -webkit-transform: scale(1.1); /* Slight zoom */
+            transform: scale(1.1);
+        }
+        #foter { /* Copyright text */
+            font-family: 'League Spartan', sans-serif; /* Font */
+            color: white; /* White color */
+        }
+        li { /* Footer list items */
+            color: white; /* White text */
+        }
+        @media (max-width: 768px) { /* Responsive for phones/tablets */
+            .new-div-container h1,
+            .new-div-container p {
+                margin-right: 5%; /* Reduce right margin on small screens */
+            }
+            .img-1 {
+                margin-left: 5%; /* Reduce left margin */
+                margin-top: 0; /* Reset margin top */
+                width: 90%; /* Shrink image width */
+                height: auto; /* Keep aspect ratio */
+            }
+            .div-grid-container,
+            .div-grid-2 {
+                grid-template-columns: 1fr; /* Stack columns vertically */
+                margin: 5%; /* Margin all around */
+                gap: 2rem; /* Smaller gap */
+            }
+        }
+        span { color: orange; } /* Highlights specific text in orange */
     </style>
+    <script>
+        // Adds shadow to navbar when scrolling
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-container'); // Selects navbar
+            if (window.scrollY > 0) { // If page is scrolled down
+                navbar.classList.add('navbar-shadow'); // Add shadow
+            } else {
+                navbar.classList.remove('navbar-shadow'); // Remove shadow if at top
+            }
+        });
+    </script>
 </head>
 <body>
-    <header class="navbar-container navbar-light">
+    <header class="navbar-container"> <!-- Sticky navigation bar -->
         <nav>
             
             <img class="logo" src="img/Screenshot_2025-05-28_150108-removebg-preview (1).png"  alt="">
             <ul>
                 <li><a href="inedx.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="community.html">COMMUNITY</a></li>
+                <li><a href="communities.html">COMMUNITY</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <div class="new-div-container">
-        <h1>Manage your construction sites with us</h1>
-        <img class="img-1" src="img/measurement-tools-mac-en.png" width="600" height="400" alt="Construction Image with a phone tablet and laptop displaying a construction plan">
-        <p>Keep track of tasks and inspections. Share info with your team and stay connected on-site.</p>
+    <main>
+        <section>
+            <div class="new-div-container">
+                <h1><span>Manage</span> your construction sites with us</h1>
+                <img class="img-1" src="img/measurement-tools-mac-en.png" width="600" height="400" alt="Construction Image with a phone tablet and laptop displaying a construction plan">
+            <p>Keep track of tasks and inspections. Share info with your team and stay connected on-site.</p>
     </div>
+    </section>
+    </main>
     <section class="div-container">
         <h1>INTERNSHIP/PROGRAMS</h1>
     </div>
-    <div class="newest-container">
-    <div class="div-grid-container">
-        <img clas src="img/Your paragraph text.png" alt="3 circiular images, 1 of them has a person the second has biuldings and the third one has a hammer">
-        <img src="img/Your paragraph text (3).png" width="200px" height="200px" alt="">
-        <img src="img/Your paragraph text (4).png" alt="">
+    <div class="newest-container"> <!--for flex wrap-->
+    <div class="div-grid-container"> <!-- Contains grid images and text -->
+        <img  src="img/Your paragraph text.png" alt="3 circiular images, 1 of them has a person the second has biuldings and the third one has a hammer">
+        <img  src="img/Your paragraph text (3).png" width="200px" height="200px" alt="">
+        <img  src="img/Your paragraph text (4).png" alt="">
     </div>
     <div class="div-grid-2">
         <p>Learn essential soft skills, safety protocols, and industry knowledge to prepare for your career in construction. Our programs support your growth every step of the way. </p>
@@ -138,6 +184,7 @@
     </div>
 </section>
 <br>
+<section>
 <div class="div-3-container">
     <img src="img/Screenshot_2025-05-28_150108-removebg-preview (1).png" alt="a logo of a construction company" class="img-center" width="300" height="200">
     <br>
@@ -145,15 +192,20 @@
         We work throughout Manitoba, Saskatchewan and North Western Ontario with mobile plants and crews. We are based out of Winnipeg, Manitoba,
 </p>
 </div>
+</section>
 <br>
-<footer class="footer-container">
-    <a href=""><img src="img/3955024.png" width="5%" alt=""></a>
-    <a href=""><img src="img/5969020.png" width="5%" alt=""></a>
-    <a href="https://www.mapleleafconstruction.ca/our-company/">WEBSITE</a>
-    <a href="">FILLER</a>
-    <a href="">FILLER</a>
-    <a href="">FILLER</a>
-    <a href="">FILLER</a>
+<footer class="footer-container"><!--for footer-->
+    <ul>
+    <li><a href="https://www.mapleleafconstruction.ca/our-company/">WEBSITE</a></li>
+    <li><a href="https://www.mapleleafconstruction.ca/wp-content/uploads/2025/04/Forced-Labour-Annual-Report-.pdf">foreced labor anual report</a></li>
+    <li><a href="communities.html">Our Partners</a></li>
+    <li><a href="contact.html">Contacts</a></li>
+</ul>
+    <br>
+    <br>
+    <p id="foter">&copy; 2025 Maple leaf construction. All rights reserved.</p>
+    <a href="https://www.instagram.com/"><img class="footer-icon" src="img/3955024.png" width="5%" alt=""></a>
+    <a href="https://x.com/"><img class="footer-icon" src="img/5969020.png" width="5%" alt=""></a>
 </footer>
 </body>
 </html>

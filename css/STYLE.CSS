@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 nav{
     display: flex;
@@ -43,5 +44,9 @@ nav ul li a:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0);
     transition: box-shadow 0.3s ease;
     background: #fff;
+    z-index: 2;
     /* animation: slide-in-down .42s cubic-bezier(.165,.84,.44,1); */
+}
+.navbar-shadow{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

@@ -6,47 +6,77 @@
     <title>ABOUT US page</title>
     <link rel="stylesheet" href="css/STYLE.CSS">
     <style>
-        body{
-            height: 100%;
+        body {
+            height: 100%; /* Full height of viewport */
+            line-height: 1.6; /* Spacing between lines */
+            letter-spacing: 0.03rem; /* Small space between letters */
         }
-
-        .first-paragraph-container p{
-            margin-left: 5%;
-            margin-top: 5%;
-            margin-right: 10%;
-            font-family: Arial, Helvetica, sans-serif;
+        .first-paragraph-container p {
+            margin-left: 5%; /* Left space */
+            margin-top: 5%; /* Top space */
+            margin-right: 10%; /* Right space */
+            font-family: Arial, Helvetica, sans-serif; /* Font family for paragraphs */
         }
-        .first-paragraph-container h1{
-            margin-left: 5%;
-            margin-top: 3%;
-            font-size: 3.5rem;
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 750;
+        .first-paragraph-container h1 {
+            margin-left: 5%; /* Left space */
+            margin-top: 3%; /* Top space */
+            font-size: 3.5rem; /* Large heading size */
+            font-family: 'League Spartan', sans-serif; /* Font family for heading */
+            font-weight: 750; /* Bold weight */
         }
-        video{
-            border-radius: 10px 10px 10px 10px;
-            justify-self: center;
+        video {
+            border-radius: 10px; /* Rounded corners */
+            justify-self: center; /* Centers inside grid/flex (if used) */
             align-self: center;
-            margin-left: auto;
+            margin-left: auto; /* Centers the video horizontally */
             margin-right: auto;
-            width: 80%;
+            width: 80%; /* Makes video 80% width of container */
         }
-        .last-div-hopfully{
-            display: flex;
-            width: 10*0%;
-            max-width: 100%; 
-            height: 550px; 
-            overflow: hidden; 
-            position: relative;
+        .last-div-hopfully {
+            display: flex; /* Flexbox layout */
+            width: 10*0%; /* Incorrect: should probably be 100% (fix below) */
+            max-width: 100%; /* Maximum width is full container */
+            height: 550px; /* Fixed height */
+            overflow: hidden; /* Hides anything that overflows */
+            position: relative; /* Allows positioning of child elements */
         }
-        .last-div-hopfully video{
-            object-fit: cover; 
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-
+        .footer-container {
+            display: flex; /* Flexbox for footer */
+            flex-wrap: wrap; /* Wrap items to next line if needed */
+            background-color: #353030; /* Dark background color */
+            padding: 5%; /* Space around content */
+            justify-content: center; /* Centers items */
+            gap: 50px; /* Space between footer items */
+            height: 50%; /* Relative height */
+        }
+        .footer-container a {
+            color: white; /* White link text */
+            text-decoration: none; /* Removes underline */
+            font-family: 'League Spartan', sans-serif; /* Font style */
+        }
+        .footer-icon {
+            width: 40px; /* Icon width */
+            height: 40px; /* Icon height */
+        }
+        #foter {
+            font-family: 'league spartan'; /* Footer text font */
+            color: white; /* White footer text */
+        }
+        li {
+            color: white; /* White list items */
         }
     </style>
+    <script>
+        // Adds shadow to navbar when scrolling
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-container'); // Selects navbar
+            if (window.scrollY > 0) { // If page is scrolled down
+                navbar.classList.add('navbar-shadow'); // Add shadow class
+            } else {
+                navbar.classList.remove('navbar-shadow'); // Remove shadow class
+            }
+        });
+    </script>
 </head>
 <body>
     <header class="navbar-container navbar-light">
@@ -56,7 +86,7 @@
             <ul>
                 <li><a href="inedx.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="community.html">COMMUNITY</a></li>
+                <li><a href="communities.html">COMMUNITY</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
@@ -70,12 +100,34 @@
     <div>
     <div class="last-div-hopfully">
         <video src="img/42926-434300944.mp4" autoplay muted loop playsinline>        
-            <p>Whether it be grade controlled electronics for asphalt pavers and concrete finishers or GPS controlled excavation and base equipment, Maple Leaf Construction’s team will deliver a finished product with a high degree of accuracy in the shortest time possible.
+    </div>
+    <div class="first-paragraph-container">
+        <p>Whether it be grade controlled electronics for asphalt pavers and concrete finishers or GPS controlled excavation and base equipment, Maple Leaf Construction’s team will deliver a finished product with a high degree of accuracy in the shortest time possible.
             Maple Leaf Construction is a leader in environmental recycling. We utilize concrete recycling and have developed an expertise in the use of recycled subbase, base and asphalt products.
+            <br>
+            <br>
+            Maple Leaf Construction takes pride in utilizing advanced, grade-controlled electronics in equipment such as asphalt pavers and concrete finishers. In addition, we employ GPS-guided 
+            technology for excavation and base preparation processes. These innovations enable our highly skilled team to complete construction projects with exceptional precision and efficiency, 
+            ensuring a high-quality finished product in the shortest time possible.
+            <br>
+            <br>
+            Furthermore, Maple Leaf Construction is recognized as a leader in sustainable construction practices, particularly in environmental recycling. We are committed to reducing our environmental impact 
+            through the use of concrete recycling techniques. Over the years, we have developed extensive expertise in incorporating recycled materials—such as subbase, base, and asphalt—into our construction projects.
+            This not only supports eco-friendly practices but also promotes cost-effective and resource-conscious solutions in the industry.
         </p>
     </div>
-    <footer>
-
-    </footer>
+    <footer class="footer-container">
+    <ul>
+    <li><a href="https://www.mapleleafconstruction.ca/our-company/">WEBSITE</a></li>
+    <li><a href="https://www.mapleleafconstruction.ca/wp-content/uploads/2025/04/Forced-Labour-Annual-Report-.pdf">foreced labor anual report</a></li>
+    <li><a href="communities.html">Our Partners</a></li>
+    <li><a href="contact.html">Contacts</a></li>
+</ul>
+    <br>
+    <br>
+    <p id="foter">&copy; 2025 Maple leaf construction. All rights reserved.</p>
+    <a href="https://www.instagram.com/"><img class="footer-icon" src="img/3955024.png" width="5%" alt=""></a>
+    <a href="https://x.com/"><img class="footer-icon" src="img/5969020.png" width="5%" alt=""></a>
+</footer>
 </body>
 </html>

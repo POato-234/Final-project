@@ -4,23 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <style>
-    body{
-        background-image: url("img/Screenshot\ 2025-05-29\ 152702.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .first-div{
-        width: 30px;
-        height: 250px ;
-    }
+        * {
+            margin: 0;              /* Remove default margin */
+            padding: 0;             /* Remove default padding */
+            line-height: 1;       /* Set line height */
+            letter-spacing: 0.03rem; /* Slight letter spacing */
+        }
+        
+        html {
+            font-family: 'League Spartan'; /* Set font family */
+            text-align: center;             /* Center text by default */
+            font-size: 2rem;                /* Base font size */
+        }
+        body {
+            min-height: 100vh;              /* Full viewport height */
+            background-image: url(img/pexels-pixabay-209272.jpg); /* Background image */
+            background-size: cover;         /* Cover entire area */
+            background-position: right;    /* Align background right */
+            background-attachment: fixed;  /* Fixed background on scroll */
+            overflow: hidden;              /* Disable scrolling */
+        }
+        .first-div {
+            background: linear-gradient(#c7c7c7, #e0daba); /* Gradient background */
+            height: 100vh;                               /* Full viewport height */
+            width: max(40%, 600px);                      /* Width 40% or 600px max */
+            padding: 10px;                               /* Inner spacing */
+            border-radius: 0 20px 20px 0;                /* Rounded right corners */
+            box-sizing: border-box;                      /* Include padding in size */
+
+            display: -webkit-flex;  /* Flexbox fallback for older browsers */
+            display: flex;          /* Flex container */
+            -webkit-flex-direction: column; /* Vertical direction fallback */
+            flex-direction: column;          /* Vertical direction */
+            -webkit-align-items: center;     /* Center items horizontally fallback */
+            align-items: center;             /* Center horizontally */
+            -webkit-justify-content: center; /* Center items vertically fallback */
+            justify-content: center;          /* Center vertically */
+        }
+        h1 {
+            font-weight: 900;                        /* Bold font */
+            font-size: clamp(2rem, 5vw, 4rem);      /* Responsive font size */
+            text-transform: uppercase;               /* Uppercase text */
+        }
+        form {
+            width: min(400px, 100%);                 /* Max width 400px or 100% */
+            margin-top: 5%;                          /* Space above */
+            margin-bottom: 10%;                      /* Space below */
+            display: flex;                           /* Flex container */
+            flex-direction: column;                  /* Stack inputs vertically */
+            align-items: center;                     /* Center inputs horizontally */
+            gap: 20px;                              /* Space between inputs */
+        }
+        form div {
+            width: 100%;                            /* Full width container */
+            display: flex;                         /* Flex container */
+            justify-content: center;               /* Center label & input */
+        }
+        form label {
+            flex-shrink: 0;                        /* Prevent shrinking */
+            height: 50px;                          /* Fixed height */
+            width: 50px;                           /* Fixed width */
+            border-radius: 10px;                   /* Rounded corners */
+            display: flex;                        /* Flex container */
+            justify-content: center;               /* Center text horizontally */
+            align-items: center;                   /* Center text vertically */
+            font-size: 1.5rem;                    /* Label font size */
+            font-weight: 500;                     /* Medium font weight */
+        }
+        form input {
+            box-sizing: border-box;                /* Include padding in width */
+            flex-grow: 1;                         /* Take remaining space */
+            min-width: 0;                        /* Prevent overflow */
+            height: 50px;                        /* Fixed height */
+            padding: 1em;                        /* Inner spacing */
+            border-radius: 15px;                 /* Rounded corners */
+            border: 2px solid white;             /* White border */
+            background-color: rgb(255, 255, 255); /* White background */
+            transition: 150ms ease;               /* Smooth transition */
+            border-left: none;                   /* Remove left border */
+        }
+        form textarea {
+            box-sizing: border-box;              /* Include padding in size */
+            resize: none;                        /* Disable manual resizing */
+            flex-grow: 1;                       /* Take remaining space */
+            min-width: 0;                      /* Prevent overflow */
+            height: 100px;                     /* Fixed height */
+            padding: 1em;                     /* Inner spacing */
+            border-left: none;                /* Remove left border */
+            border-radius: 15px;              /* Rounded corners */
+            border: 2px solid white;           /* White border */
+            background-color: rgb(255, 255, 255); /* White background */
+            transition: 150ms ease;             /* Smooth transition */
+        }
+        input:hover, textarea:hover {
+            border: 2px solid black;           /* Black border on hover */
+        }
+        form input:focus, textarea:focus {
+            outline: none;                     /* Remove default focus outline */
+        }
+        form button {
+            margin-top: 10px;                   /* Space above button */
+            border: none;                      /* No border */
+            border-radius: 1000px;             /* Fully rounded (pill shape) */
+            padding: 0.85em 4em;               /* Padding inside button */
+            background-color: rgb(209, 224, 238); /* Light blue background */
+            font-weight: 600;                  /* Semi-bold text */
+            text-transform: uppercase;        /* Uppercase letters */
+            cursor: pointer;                  /* Pointer cursor on hover */
+        }
+        form button:hover {
+            background-color: rgb(165, 202, 238); /* Darker blue on hover */
+        }
+        @media(max-width: 1100px) {
+            .first-div {
+                width: min(600px, 100%);  /* Full width or 600px max */
+                border-radius: 0;         /* Remove border radius on smaller screens */
+            }
+        }
     </style>
+    <script>
+
+    </script>
+</script>
 </head>
 <body>
-    
     <div class="first-div">
-
+        <h1>Contact us</h1>
+    <form id="contact" action="inedx.html" method="get"> <!--a  Contact form -->
+        
+        <div>
+            <input required type="text" name="firstname" id="firstname-input" placeholder="Enter Name"> <!-- Name input -->
+        </div>
+        <div>
+            <input required type="email" name="email" id="email-input" placeholder="Enter Email"><!-- Email input -->
+        </div>
+        <div>
+            <textarea required name="Massage" id="Massage" placeholder="Feedback/Questions"></textarea> <!-- Message textarea for yout message -->
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <br>
+    <br>
+    <p>go back to <a href="inedx.html">main paig</a></p>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {  // Run when page loads
+            const form = document.getElementById("contact");       // Get the form element
+            form.addEventListener("submit", function(event) {      // On form submit
+                event.preventDefault();                             // Prevent default submit (no reload)
+                alert("Thank you for your feedback!");              // Show thank you alert
+                window.location.href = "inedex.html";               // brings you back to main page
+            });
+        });
+    </script>
 
 </body>
 </html>

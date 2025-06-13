@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our communities</title>
+    <link rel="stylesheet" href="css/STYLE.CSS">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'league spartan'; /* Uses League Spartan font */
+            margin-top: 5%; /* Adds space above heading */
+            margin-left: 3%; /* Adds space to the left */
+            font-weight: 800; /* Makes font very bold */
+            font-size: 2rem /* Sets font size */
+        }
+        .grid div {
+            background-color: rgb(85, 127, 164); /* Light blue background */
+            margin: 0; /* No margin */
+            padding: 0; /* No padding */
+            border: 1px solid gray; /* Gray border */
+        }
+        .grid {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+            grid-template-rows: repeat(3, 200px); /* Three rows, 200px height each */
+            gap: 20px; /* Space between items */
+            margin-left: auto; /* Centers grid horizontally */
+            margin-right: auto;
+            text-align: center; /* Centers text inside items */
+        }
+        .grid img {
+            width: 100%; /* Makes image fill container width */
+            height: 100%; /* Makes image fill container height */
+        }
+        a {
+            text-decoration: none; /* Removes underline from links */
+        }
+        .img-box {
+            position: relative; /* Positions child elements absolutely */
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effects */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Scales image to fill box */
+            display: block; /* Makes container a block element */
+        }
+        .img-box:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+        }
+        .img-box::after {
+            content: ""; /* Adds an overlay effect */
+            position: absolute; /* Covers the image */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0); /* Transparent by default */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        .img-box:hover::after {
+            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay on hover */
+        }
+        .overlaping-text {
+            position: absolute; /* Places text over image */
+            top: 50%; /* Vertically center */
+            left: 50%; /* Horizontally center */
+            transform: translate(-50%, -50%); /* Perfect centering */
+            color: white; /* White text */
+            font-size: 3rem; /* Large text */
+            opacity: 0; /* Hidden by default */
+            transition: 0.3 ease; /* Smooth transition */
+            z-index: 2; /* Shows above image */
+            padding: 30%; /* Adds space inside */
+            text-align: center; /* Centers text */
+        }
+        .img-box:hover .overlaping-text:hover {
+            opacity: 1; /* Makes text visible on hover */
+        }
+        .center {
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            padding: 40px 0; /* Top and bottom spacing */
+        }
+        .footer-container {
+            display: flex; /* Flexbox layout */
+            flex-wrap: wrap; /* Allows wrapping */
+            background-color: #353030; /* Dark background color */
+            padding: 5%; /* Padding around content */
+            justify-content: center; /* Center items */
+            gap: 50px; /* Space between items */
+            height: 50%; /* Half height of screen */
+        }
+        .footer-container a {
+            color: white; /* White text */
+            text-decoration: none; /* No underline */
+            font-family: 'League Spartan', sans-serif; /* Font style */
+        }
+        .footer-icon {
+            width: 40px; /* Width of icons */
+            height: 40px; /* Height of icons */
+        }
+        #foter {
+            font-family: 'league spartan'; /* Footer text font */
+            color: white; /* White text color */
+        }
+        li {
+            color: white; /* White list item text */
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() { // Runs when user scrolls
+            const navbar = document.querySelector('.navbar-container'); // Selects navbar
+            if (window.scrollY > 0) { // If scrolled down
+                navbar.classList.add('navbar-shadow'); // Adds shadow class
+            } else {
+                navbar.classList.remove('navbar-shadow'); // Removes shadow when at top
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="navbar-container navbar-light">
+        <nav>
+            <img class="logo" src="img/Screenshot_2025-05-28_150108-removebg-preview (1).png"  alt="">
+            <ul>
+                <li><a href="inedx.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="communities.html">COMMUNITY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <h1>OUR COMMUNITIES</h1>
+    </section>
+    <br>
+    <br>
+    <div class="center">
+    <div class="grid">
+        <div class="img-box">
+                <img src="img/pulford.jpg" alt="a picture of pulford website">
+            <a class="overlaping-text" href="https://pulford.ca/">View More</a>
+        </div>
+        <div class="img-box">
+            <img src="img/variety-mb-logo.jpg" alt="a picture of variety logo/website">
+            <a class="overlaping-text" href="https://varietymanitoba.com/">View More</a>
+        </div>
+        <div class="img-box"> 
+            <img src="img/museum.jpg" alt="a picture of the childrens museum logo">
+            <a class="overlaping-text" href="https://childrensmuseum.com/">View More</a>
+        </div>
+        <div class="img-box"> 
+            <img src="img/mdam-logo.jpg" alt="a picture of moodmb logos">
+            <a class="overlaping-text" href="https://moodmb.ca/">View More</a>
+        </div>
+        <div class="img-box"> 
+            <img src="img/Agape-Table.jpg" alt="a picture of agape-table logo">
+            <a class="overlaping-text" href="https://www.agapetable.ca/">View More</a></div>
+        <div class="img-box"> 
+            <img src="img/stamant.jpg" alt="a picture of stamant logo">
+            <a class="overlaping-text" href="https://stamant.ca/">View More</a>
+        </div>
+        <div class="img-box"> 
+            <img src="img/cancercarelogo.jpg" alt="cancer care logo">
+            <a class="overlaping-text" href="https://www.cancercarefdn.mb.ca/">View More</a>
+        </div>
+        <div class="img-box">  
+            <img src="img/logo-header-rehfit.jpg" alt="a picture that says rehfits">
+            <a class="overlaping-text" href="https://www.reh-fit.com/">View More</a></div>
+        <div class="img-box"> 
+            <img src="img/childrens.jpg" alt=" a picture of childrens hospital logo">
+            <a class="overlaping-text" href="https://goodbear.ca/">View More</a></div>
+        <div class="img-box">
+            <img src="img/bruce-oake-logo-01-200px3.jpg" alt="a picture of  bruce-oake logo">
+            <a class="overlaping-text" href="https://www.bruceoakefoundation.com/"> View More</a>
+        </div>
+        
+    </div>
+    </div>
+    <footer class="footer-container">
+        <ul>
+        <li><a href="https://www.mapleleafconstruction.ca/our-company/">WEBSITE</a></li>
+        <li><a href="https://www.mapleleafconstruction.ca/wp-content/uploads/2025/04/Forced-Labour-Annual-Report-.pdf">foreced labor anual report</a></li>
+        <li><a href="communities.html">Our Partners</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <a href="">FILLER</a>
+    </ul>
+    <br>
+    <br>
+    <p id="foter">&copy; 2025 Maple leaf construction. All rights reserved.</p>
+    <a href="https://www.instagram.com/"><img class="footer-icon" src="img/3955024.png" width="5%" alt="instagram icon"></a>
+    <a href="https://x.com/"><img class="footer-icon" src="img/5969020.png" width="5%" alt="twitter icon"></a>
+</footer>
+</body>
+</html>
